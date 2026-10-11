@@ -1,0 +1,18 @@
+local ZoomOutButton = {}
+ZoomOutButton.__index = ZoomOutButton
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local common = ReplicatedStorage:WaitForChild("TDX_Shared"):WaitForChild("Common")
+require(common:WaitForChild("Types"))
+require(common:WaitForChild("FirstPersonTypes"))
+require(common:WaitForChild("Utilities"))
+local BindableHandler = require(common:WaitForChild("BindableHandler"))
+local event = BindableHandler.GetEvent("ScrollWheelDown")
+
+function ZoomOutButton.New(p)
+	p.Activated:Connect(function()
+		event:Fire()
+	end)
+	return (setmetatable({}, ZoomOutButton))
+end
+
+return ZoomOutButton
