@@ -1,0 +1,32 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local common = ReplicatedStorage:WaitForChild("TDX_Shared"):WaitForChild("Common")
+local SoundDefinitions = require(common:WaitForChild("SoundDefinitions"))
+return SoundDefinitions.Merge({
+	ClickDown = SoundDefinitions.SFX("rbxassetid://15098083894", 0.3),
+	ClickUp = SoundDefinitions.SFX("rbxassetid://15098084123", 0.3),
+	SettingOff = SoundDefinitions.SFX("rbxassetid://15098083849", 0.5),
+	SettingOn = SoundDefinitions.SFX("rbxassetid://15098084231", 0.5),
+	CurrencyJingle = SoundDefinitions.SFX("rbxassetid://15098084572", 0.3),
+	CrystalShopOpen = SoundDefinitions.SFX("rbxassetid://98020681125543", 0.3),
+	CurrencyJingleCrystalsTemp = SoundDefinitions.SFX("rbxassetid://14744682799", 0.3),
+	CaseOpen = SoundDefinitions.SFX("rbxassetid://15366759610", 0.3),
+	ShopSelectOption = SoundDefinitions.SFX("rbxassetid://15366759661", 0.3),
+	CloseButtonClick = SoundDefinitions.SFX("rbxassetid://15366770396", 0.2),
+	GamepassPurchaseSuccess = SoundDefinitions.SFX("rbxassetid://15098084380", 0.5),
+	DailyLogin = SoundDefinitions.SFX("rbxassetid://15386269618", 0.4),
+	Unequip = SoundDefinitions.SFX("rbxassetid://15098084180", 0.5),
+	Equip = SoundDefinitions.SFX("rbxassetid://15098083948", 0.5),
+	HeavyPurchase = SoundDefinitions.SFX("rbxassetid://15098084621", 0.5),
+	CrystalsPurchase = SoundDefinitions.SFX("rbxassetid://92981713093272", 0.5),
+	CrateOpen = SoundDefinitions.SFX("rbxassetid://15399887441", 0.5),
+	Purchase1 = SoundDefinitions.SFX("rbxassetid://15098084380", 0.5),
+	Purchase2 = SoundDefinitions.SFX("rbxassetid://15098084298", 0.5),
+	Purchase3 = SoundDefinitions.SFX("rbxassetid://15098084032", 0.5),
+	BattlepassClaim = SoundDefinitions.SFX("rbxassetid://18461947618", 0.5),
+	QuestClaim = SoundDefinitions.SFX("rbxassetid://4612383790", 0.5),
+	MagicShopOpen = SoundDefinitions.SFX("rbxassetid://116697824018945", 0.5),
+	MagicShopCrystalsPurchase = SoundDefinitions.SFX("rbxassetid://87023738755980", 0.4),
+	TranslatorPickup1 = SoundDefinitions.SFX("rbxassetid://9113562430", 0.6),
+	TranslatorPickup2 = SoundDefinitions.SFX("rbxassetid://9125540237", 0.4),
+	DoorOpen = SoundDefinitions.SFX("rbxassetid://7309105153", 0.25)
+})

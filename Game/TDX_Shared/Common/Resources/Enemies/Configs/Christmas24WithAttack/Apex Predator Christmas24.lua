@@ -1,0 +1,83 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local common = ReplicatedStorage:WaitForChild("TDX_Shared"):WaitForChild("Common")
+require(common:WaitForChild("Types"))
+local Enums = require(common:WaitForChild("Enums"))
+return {
+	Health = 750000,
+	Speed = 1.8,
+	AnimationCalibratedSpeed = 2.3,
+	BodyHeat = 100000,
+	BodyHeatRegenerationRate = 50000,
+	OverrideDisplayName = "Snow Apex Predator",
+	HasCustomCode = true,
+	OverrideCustomCodeName = "Apex Predator",
+	Radius = 1,
+	HoverHeight = 4.12,
+	AnimationTimeScale = 1,
+	IsBoss = true,
+	BossMusicName = "ApexPredatorBossMusic",
+	AbilityNames = {
+		Enums.EnemyAbilities.ApexPredatorSummonChristmas24,
+		Enums.EnemyAbilities.ApexPredatorAxeSlam,
+		Enums.EnemyAbilities.ApexPredatorFlamethrower,
+		Enums.EnemyAbilities.ApexPredatorLaserEye,
+		Enums.EnemyAbilities.ApexPredatorLaserEyeForBase,
+		Enums.EnemyAbilities.ApexPredatorLaserShot,
+		Enums.EnemyAbilities.ApexPredatorLaserShotForBase,
+		Enums.EnemyAbilities.ApexPredatorHandLaserShot,
+		Enums.EnemyAbilities.ApexPredatorHandLaserShotForBase,
+		Enums.EnemyAbilities.ApexPredatorMissileBurstChristmas24,
+		Enums.EnemyAbilities.ApexPredatorMissileBurstForBase,
+		Enums.EnemyAbilities.ApexPredatorDeathExplosion
+	},
+	AbilityBufferTime = 2,
+	ForceFaceIntroTime = 0.65,
+	ForceFaceOutroTime = 1.2,
+	DeathAbilityNames = { Enums.EnemyAbilities.ApexPredatorDeathExplosion },
+	FootstepEffectInstanceNames = "FootstepSoundsPart",
+	SetUpFootstepKeyframeReachedEventForAllAnimations = true,
+	AttackData = {
+		{
+			Description = "Collision",
+			IgnoreOnClient = true,
+			NoStopToAttack = true,
+			OverrideStealthDetection = true,
+			CanTargetAir = false,
+			IgnoreGround = false,
+			CanTargetBase = false,
+			CanTargetBaseUsingEndNodes = false,
+			PrioritizeBase = false,
+			OnlyAttackBase = false,
+			TargetMinimumValue = 0,
+			ConsiderTargetsWithNoAttack = true,
+			IsProjectile = false,
+			IsSplash = false,
+			Damage = 1000000,
+			ReloadTime = 0.01,
+			Range = 1.5,
+			IsBurst = false
+		}
+	},
+	HasAttack = true,
+	StopToAttack = false,
+	StealthDetection = false,
+	RangeVariance = false,
+	NoPathOffset = true,
+	RotationOffset = CFrame.Angles(0, -1.5707963267948966, 0),
+	MinimumTimeBeforeSequenceEnds = 8,
+	FakeEnemy = false,
+	FadeOutOnDeath = true,
+	FadeOutDelay = 5,
+	FadeOutCustomTime = 1,
+	FadeOutRemoveDelay = 1,
+	DamageReductionTable = {
+		{ DamageType = Enums.DamageTypes.Explosive, DamageReduction = 0.5 },
+		{ DamageType = Enums.DamageTypes.Laser, DamageReduction = 0.5 },
+		{ DamageType = Enums.DamageTypes.Golden, DamageReduction = 0.5 },
+		{ DamageType = Enums.DamageTypes.Bullet, DamageReduction = 0.5 },
+		{ DamageType = Enums.DamageTypes.Ice, DamageReduction = 0.75 },
+		{ DamageType = Enums.DamageTypes.Fire, DamageReduction = 0.65 },
+		{ DamageType = Enums.DamageTypes.Collision, DamageReduction = 0.3 }
+	},
+	KillBadgeId = 1274056175892888
+}

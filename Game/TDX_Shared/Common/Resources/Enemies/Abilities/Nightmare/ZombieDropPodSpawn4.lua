@@ -1,0 +1,48 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local common = ReplicatedStorage:WaitForChild("TDX_Shared"):WaitForChild("Common")
+require(common:WaitForChild("AbilityTypes"))
+local Enums = require(common:WaitForChild("Enums"))
+return {
+	StartingCooldown = 0,
+	Cooldown = 1e999,
+	Animated = false,
+	Delay = 0,
+	ExecutionTime = 5,
+	MaximumUses = 1,
+	Kamikaze = true,
+	SpawnEnemies = {
+		{
+			EnemyType = Enums.Enemies.RevivedMonsterPlus,
+			Count = 1,
+			SpawnDelay = 0,
+			StaggerMaxDelay = 2,
+			EvenStagger = true,
+			MaxSpawnOffsetStuds = 0.1,
+			TransferStealth = true,
+			NoCash = true
+		},
+		{
+			EnemyType = Enums.Enemies.Lurch3,
+			Count = 7,
+			ShieldMultiplier = 10,
+			HealthMultiplier = 15,
+			SpawnDelay = 0,
+			StaggerMaxDelay = 2,
+			EvenStagger = true,
+			MaxSpawnOffsetStuds = 0.1,
+			TransferStealth = true,
+			NoCash = true
+		},
+		{
+			EnemyType = Enums.Enemies.NuclearTank,
+			Count = 1,
+			SpawnDelay = 0,
+			StaggerMaxDelay = 2,
+			EvenStagger = true,
+			MaxSpawnOffsetStuds = 0.1,
+			TransferStealth = true,
+			NoCash = true
+		}
+	},
+	SpawnEnemiesNoSummonEffect = true
+}

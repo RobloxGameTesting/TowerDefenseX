@@ -1,0 +1,62 @@
+return {
+	MonsterMash = { Image = "", Price = 2000, MinLevel = 0 },
+	ChainsawDance = { Image = "", Price = 1000, MinLevel = 0 },
+	SherbertDance = { Image = "", Price = 1000, MinLevel = 0 },
+	Sturdy = { Image = "", Price = 1000, MinLevel = 0 },
+	StockShuffle = { Image = "", Price = 1000, MinLevel = 0 },
+	Rave = { IsOffsale = true, Image = "", Price = 2100000000, MinLevel = 0 },
+	Conga = { IsOffsale = true, Image = "", Price = 2100000000, MinLevel = 0 },
+	["Bench Rest"] = { IsOffsale = true, Image = "", Price = 2100000000, MinLevel = 0 },
+	["Hot Chocolate"] = { IsOffsale = true, Image = "", Price = 2100000000, MinLevel = 0 },
+	["Eradicator Toy"] = { IsOffsale = true, Image = "", Price = 2100000000, MinLevel = 0 },
+	Fireworks = {
+		IsOffsale = true,
+		Image = "",
+		Price = 2400,
+		PriceInRobux = 100,
+		ProductId = 3324454328,
+		MinLevel = 0
+	},
+	BBQ = {
+		IsOffsale = true,
+		LimitedTime = true,
+		Image = "",
+		Currency = "Burgers",
+		Price = 100,
+		PriceInRobux = 125,
+		ProductId = 3388732547,
+		MinLevel = 0
+	},
+	["Pumpkin Ride"] = { IsOffsale = true },
+	["Candy Bucket"] = { IsOffsale = true },
+	["Hot Choccy"] = { IsOffsale = true },
+	Fountain = { Image = "", OnSale = true, Price = 1200, MinLevel = 0 },
+	Mortar = { Image = "", Price = 3500, MinLevel = 0 },
+	Lantern = {
+		IsOffsale = true,
+		LimitedTime = true,
+		Currency = "Envelopes",
+		Price = 35,
+		Image = "",
+		MinLevel = 0,
+		PriceInRobux = 30,
+		ProductId = 3539579848
+	},
+	["Rice Cake Soup"] = {
+		IsOffsale = true,
+		LimitedTime = true,
+		Currency = "Envelopes",
+		Price = 150,
+		Image = "",
+		MinLevel = 0,
+		PriceInRobux = 100,
+		ProductId = 3539997761
+	},
+	["Bunny Plush"] = { IsOffsale = true },
+	["Void Plush"] = { IsOffsale = true },
+	["Commander Toy"] = { IsOffsale = true },
+	["Void Gummies"] = { IsOffsale = true },
+	["Jeep Patrol"] = { IsOffsale = true },
+	["Void Rest Time"] = { IsOffsale = true },
+	["Warship Throw"] = { IsOffsale = true }
+}

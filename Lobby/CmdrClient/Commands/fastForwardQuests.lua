@@ -1,0 +1,1 @@
+return { Name = "fastforwardquests", Description = "", Group = "Programmer", Args = {} }

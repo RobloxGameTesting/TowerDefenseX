@@ -1,0 +1,12 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local common = ReplicatedStorage:WaitForChild("TDX_Shared"):WaitForChild("Common")
+require(common:WaitForChild("TowerBuffUtilities"))
+local Enums = require(common:WaitForChild("Enums"))
+return {
+	Type = Enums.TowerBuffTypes.Conversion,
+	Percentage = 1,
+	Time = 1e999,
+	IsDebuff = true,
+	NoVisualEffect = true,
+	RemoveIfHealedForTime = 0.8
+}

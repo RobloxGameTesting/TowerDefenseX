@@ -1,0 +1,142 @@
+local createVector = vector.create
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local common = ReplicatedStorage:WaitForChild("TDX_Shared"):WaitForChild("Common")
+require(common:WaitForChild("AbilityTypes"))
+require(common:WaitForChild("ProjectileTypes"))
+local Enums = require(common:WaitForChild("Enums"))
+return {
+	StartingCooldown = 20,
+	Cooldown = 72,
+	Animated = true,
+	Delay = 2,
+	ExecutionTime = 4.65,
+	AnimationName = "Snowball Artillery",
+	EffectParentInstanceNames = { "SnowballArtillery" },
+	BombardmentData = {
+		Attacks = {
+			{
+				SpawnDistance = 800,
+				SpawnOffsetFromOrigin = createVector(0, 0, -1),
+				SpawnVarianceXZ = 300,
+				SpawnVarianceY = 50,
+				SpawnHeight = 80,
+				TargetGroundAroundEnemyRadius = 35,
+				TargetGroundMaximumHeightDelta = 18,
+				Duration = 4,
+				Count = 5,
+				ProjectileName = Enums.Projectiles.SnowMeteoriteSmall,
+				Damage = 50,
+				TowerBuffName = Enums.TowerBuffs.PartyGeneralCelgarSnowballFreeze,
+				SplashRadius = 2.5,
+				SplashAlwaysHitAirAndGround = false
+			},
+			{
+				SpawnDistance = 900,
+				SpawnOffsetFromOrigin = createVector(0, 0, -1),
+				SpawnVarianceXZ = 300,
+				SpawnVarianceY = 50,
+				SpawnHeight = 90,
+				TargetGroundAroundEnemyRadius = 35,
+				TargetGroundMaximumHeightDelta = 18,
+				Duration = 2.5,
+				Count = 3,
+				ProjectileName = Enums.Projectiles.SnowMeteoriteMedium,
+				Damage = 65,
+				TowerBuffName = Enums.TowerBuffs.PartyGeneralCelgarSnowballFreeze,
+				SplashRadius = 3,
+				SplashAlwaysHitAirAndGround = false
+			},
+			{
+				SpawnDistance = 1000,
+				SpawnOffsetFromOrigin = createVector(0, 0, -1),
+				SpawnVarianceXZ = 150,
+				SpawnVarianceY = 50,
+				SpawnHeight = 100,
+				TargetGroundAroundEnemyRadius = 35,
+				TargetGroundMaximumHeightDelta = 18,
+				Duration = 1,
+				Count = 2,
+				ProjectileName = Enums.Projectiles.SnowMeteoriteLarge,
+				Damage = 75,
+				TowerBuffName = Enums.TowerBuffs.PartyGeneralCelgarSnowballFreeze,
+				SplashRadius = 6,
+				SplashAlwaysHitAirAndGround = true
+			},
+			{
+				SpawnDistance = 800,
+				SpawnOffsetFromOrigin = createVector(0, 0, -1),
+				SpawnVarianceXZ = 300,
+				SpawnVarianceY = 50,
+				SpawnHeight = 80,
+				TargetRandomTower = true,
+				TargetTowerMinimumRange = 20,
+				TargetTowerMinimumValue = 10000,
+				TargetRandomIgnoreMap = { [Enums.Towers.Medic] = true },
+				Delay = 1,
+				Duration = 4,
+				Count = 4,
+				ProjectileName = Enums.Projectiles.SnowMeteoriteSmall,
+				Damage = 90,
+				TowerBuffName = Enums.TowerBuffs.PartyGeneralCelgarSnowballFreeze,
+				SplashRadius = 2.5,
+				SplashAlwaysHitAirAndGround = false
+			},
+			{
+				SpawnDistance = 900,
+				SpawnOffsetFromOrigin = createVector(0, 0, -1),
+				SpawnVarianceXZ = 300,
+				SpawnVarianceY = 50,
+				SpawnHeight = 90,
+				TargetRandomTower = true,
+				TargetTowerMinimumRange = 20,
+				TargetTowerMinimumValue = 10000,
+				TargetRandomIgnoreMap = { [Enums.Towers.Medic] = true },
+				Delay = 1,
+				Duration = 2.5,
+				Count = 1,
+				ProjectileName = Enums.Projectiles.SnowMeteoriteMedium,
+				Damage = 100,
+				TowerBuffName = Enums.TowerBuffs.PartyGeneralCelgarSnowballFreeze,
+				SplashRadius = 3,
+				SplashAlwaysHitAirAndGround = false
+			},
+			{
+				SpawnDistance = 800,
+				SpawnOffsetFromOrigin = createVector(0, 0, -1),
+				SpawnVarianceXZ = 150,
+				SpawnVarianceY = 50,
+				SpawnHeight = 100,
+				TargetRandomTower = true,
+				TargetTowerMinimumRange = 20,
+				TargetTowerMinimumValue = 10000,
+				TargetRandomIgnoreMap = { [Enums.Towers.Medic] = true },
+				Delay = 1,
+				Duration = 1,
+				Count = 1,
+				ProjectileName = Enums.Projectiles.SnowMeteoriteLarge,
+				Damage = 125,
+				TowerBuffName = Enums.TowerBuffs.PartyGeneralCelgarSnowballFreeze,
+				SplashRadius = 6,
+				SplashAlwaysHitAirAndGround = true
+			},
+			{
+				SpawnDistance = 1000,
+				SpawnOffsetFromOrigin = createVector(0, 0, -1),
+				SpawnVarianceXZ = 300,
+				SpawnVarianceY = 50,
+				SpawnHeight = 80,
+				TargetRandomTower = true,
+				CanTargetAir = true,
+				IgnoreGround = true,
+				Delay = 1,
+				Duration = 4,
+				Count = 6,
+				ProjectileName = Enums.Projectiles.SnowMeteoriteSmall,
+				Damage = 1200,
+				TowerBuffName = Enums.TowerBuffs.PartyGeneralCelgarSnowballFreeze,
+				SplashRadius = 2.5,
+				SplashAlwaysHitAirAndGround = false
+			}
+		}
+	}
+}

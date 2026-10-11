@@ -1,0 +1,1 @@
+return { TickInterval = 7, StartingCashEco = 45, IncreaseDuration = 21, IncreaseAmount = 25 }

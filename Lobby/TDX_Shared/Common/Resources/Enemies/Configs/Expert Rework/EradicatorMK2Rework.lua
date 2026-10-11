@@ -1,0 +1,66 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local common = ReplicatedStorage:WaitForChild("TDX_Shared"):WaitForChild("Common")
+require(common:WaitForChild("Types"))
+local Enums = require(common:WaitForChild("Enums"))
+return {
+	Health = 1450000,
+	Shield = 250000,
+	Speed = 1.8,
+	BodyHeat = 40000,
+	BodyHeatRegenerationRate = 800,
+	OverrideDisplayName = "Eradicator MK II+",
+	HasCustomCode = true,
+	Radius = 1,
+	AnimationTimeScale = 1,
+	KillBadgeId = 3821431113784734,
+	IsBoss = true,
+	BossMusicName = "EradicatorMK2ReworkBossMusic",
+	AbilityNames = {
+		Enums.EnemyAbilities.EradicatorMK2ReworkRage,
+		Enums.EnemyAbilities.EradicatorMK2ReworkRage_Minigun,
+		Enums.EnemyAbilities.EradicatorMK2ReworkRage_Rockets,
+		Enums.EnemyAbilities.EradicatorMK2ReworkRage_Scream,
+		Enums.EnemyAbilities.EradicatorMK2ReworkRage_ScreamDamage,
+		Enums.EnemyAbilities.EradicatorMK2ReworkRage_DroneSupport,
+		Enums.EnemyAbilities.EradicatorMK2ReworkRocketStorm,
+		Enums.EnemyAbilities.EradicatorMK2ReworkRocketStormAA,
+		Enums.EnemyAbilities.EradicatorMK2ReworkMinigunStrafe,
+		Enums.EnemyAbilities.EradicatorMK2ReworkMinigunSingleTarget,
+		Enums.EnemyAbilities.EradicatorMK2ReworkFlamethrower,
+		Enums.EnemyAbilities.EradicatorMK2ReworkCruiseMissileGround,
+		Enums.EnemyAbilities.EradicatorMK2ReworkCruiseMissileNaval,
+		Enums.EnemyAbilities.EradicatorMK2ReworkCruiseMissileAA,
+		Enums.EnemyAbilities.EradicatorMK2ReworkRocketRain,
+		Enums.EnemyAbilities.EradicatorMK2ReworkRocketRainNaval,
+		Enums.EnemyAbilities.EradicatorMK2ReworkRocketRain_Stomp,
+		Enums.EnemyAbilities.EradicatorMK2ReworkShieldHeal,
+		Enums.EnemyAbilities.EradicatorMK2ReworkStealthMode,
+		Enums.EnemyAbilities.EradicatorMK2ReworkDroneSupport
+	},
+	AbilityBufferTime = 2,
+	ForceFaceIntroTime = 0.6,
+	ForceFaceOutroTime = 0.7,
+	DeathAbilityNames = {},
+	FootstepEffectInstanceNames = "Root>FootstepSFX",
+	SetUpFootstepKeyframeReachedEventForAllAnimations = true,
+	NoPathOffset = true,
+	RotationOffset = CFrame.Angles(0, 3.141592653589793, 0),
+	MinimumTimeBeforeSequenceEnds = 11,
+	FakeEnemy = false,
+	FadeOutOnDeath = true,
+	FadeOutDelay = 1,
+	FadeOutCustomTime = 3,
+	FadeOutRemoveDelay = 12,
+	ShieldModelName = "ForceField",
+	DamageReductionTable = {
+		{ DamageType = Enums.DamageTypes.Explosive, DamageReduction = 0.3 },
+		{ DamageType = Enums.DamageTypes.Laser, DamageReduction = 0.2 },
+		{ DamageType = Enums.DamageTypes.Golden, DamageReduction = 0.2 },
+		{ DamageType = Enums.DamageTypes.Fire, DamageReduction = 0.5 },
+		{ DamageType = Enums.DamageTypes.Collision, DamageReduction = 0.6 }
+	},
+	PlayerCountToAdditionalStatsMap = {
+		[3] = { Health = 50000, Shield = 175000 },
+		[4] = { Health = 150000, Shield = 350000 }
+	}
+}

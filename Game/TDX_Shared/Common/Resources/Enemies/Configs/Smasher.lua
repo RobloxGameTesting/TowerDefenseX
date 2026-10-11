@@ -1,0 +1,18 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local common = ReplicatedStorage:WaitForChild("TDX_Shared"):WaitForChild("Common")
+require(common:WaitForChild("Types"))
+local Enums = require(common:WaitForChild("Enums"))
+return {
+	Health = 9000,
+	Speed = 2.2,
+	BodyHeat = 1400,
+	BodyHeatRegenerationRate = 150,
+	Radius = 1,
+	HoverHeight = 1.534,
+	AnimationTimeScale = 1,
+	AbilityNames = { Enums.EnemyAbilities.SmasherSlam },
+	NoPathOffset = false,
+	RotationOffset = CFrame.Angles(0, -1.5707963267948966, 0),
+	DeathEffect = Enums.DeathEffects.ZombieBlood,
+	FakeEnemy = false
+}

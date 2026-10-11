@@ -1,0 +1,19 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local common = ReplicatedStorage:WaitForChild("TDX_Shared"):WaitForChild("Common")
+require(common:WaitForChild("Types"))
+local Enums = require(common:WaitForChild("Enums"))
+return {
+	AirUnit = true,
+	Health = 10000,
+	Speed = 1.5,
+	BodyHeat = 500,
+	BodyHeatRegenerationRate = 250,
+	Radius = 1,
+	HoverHeight = _G.AIR_ENEMY_HOVER_HEIGHT,
+	HoverHeightVariance = 0.5,
+	AnimationTimeScale = 1,
+	NoPathOffset = false,
+	RotationOffset = CFrame.Angles(0, -1.5707963267948966, 0),
+	DeathEffect = Enums.DeathEffects.ZombieBlood,
+	FakeEnemy = false
+}
